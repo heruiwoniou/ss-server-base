@@ -69,15 +69,7 @@ SimpleServer.prototype = {
     })
     server.listen(port)
     console.log('Server runing at port: ' + port + '.')
-    // var exec = cp.exec,
-    //   opened = false
 
     opn('http://127.0.0.1:' + port)
-    // if (fs.existsSync('c:/Program Files (x86)/Google/Chrome/Application/chrome.exe')) {
-    //   exec('start "" "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" http://localhost:' + port)
-    //   opened = true
-    // } else if (fs.existsSync('c:/Program Files/Google/Chrome/Application/chrome.exe') && !opened) {
-    //   exec('start "" "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" http://localhost:' + port)
-    // }
   }
 }
