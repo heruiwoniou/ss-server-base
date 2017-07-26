@@ -83,9 +83,11 @@ Dispose.prototype = {
       if (content !== undefined) {
         if (content instanceof Promise) {
           content.then(function (result) {
-            response.writeHead(200, { 'Content-Type': result.type })
-            response.write(result.data)
-            response.end()
+            if (result) {
+              response.writeHead(200, { 'Content-Type': result.type })
+              response.write(result.data)
+              response.end()
+            }
           })
         } else {
           response.writeHead(200, { 'Content-Type': content.type })
